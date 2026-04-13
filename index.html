@@ -9,119 +9,298 @@
 body{font-family:'Segoe UI',system-ui,sans-serif;background:#f5f6f8;color:#1a1a2e;font-size:13px}
 a{color:#1565c0}
 .hdr{background:#0f1b2d;color:#fff;padding:14px 20px}
-.mx{max-width:1080px;margin:0 auto}
+.mx{max-width:1100px;margin:0 auto}
 .tag{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#64b5f6}
 h1{margin:2px 0;font-size:17px;font-weight:700}
 .sub{font-size:11px;color:#90caf9;margin:0}
-.qlinks{background:#1a2744;padding:5px 20px;font-size:10px}
-.qlinks a{color:#90caf9;text-decoration:none;margin-right:14px}
-.qlinks a.g{color:#a5d6a7}.qlinks a.a{color:#ffcc80}
-.nav{display:flex;border-bottom:2px solid #dee2e6;background:#fff;position:sticky;top:0;z-index:10}
-.nav button{flex:1;padding:10px 4px;border:none;background:transparent;font-size:11px;font-weight:600;cursor:pointer;color:#6c757d;border-bottom:3px solid transparent;font-family:inherit}
-.nav button.on{color:#0f1b2d;border-bottom-color:#1565c0;background:#f8f9ff}
-.pnl{display:none;padding:14px 16px}.pnl.on{display:block}
-.card{background:#fff;border:1px solid #dee2e6;border-radius:6px;margin-bottom:10px;overflow:hidden}
-.chd{padding:9px 14px;font-weight:700;font-size:12px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
-.cbd{padding:10px 14px;display:none}.cbd.open{display:block}
-.field{margin-bottom:6px}.field label{display:block;font-size:10px;font-weight:600;color:#495057;margin-bottom:1px}
-.field input,.field select,.field textarea{width:100%;padding:5px 7px;border:1px solid #ced4da;border-radius:3px;font-size:11px;font-family:inherit;background:#fff}
-.field textarea{min-height:40px;resize:vertical}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
-.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px}
-.bd{display:inline-block;padding:2px 6px;border-radius:3px;font-size:9px;font-weight:700}
-.bg{background:#e8f5e9;color:#2e7d32}.bb{background:#e3f2fd;color:#1565c0}.br{background:#ffebee;color:#c62828}.by{background:#fff8e1;color:#f57f17}.bo{background:#fbe9e7;color:#bf360c}
-.al{padding:7px 10px;border-radius:4px;font-size:10px;line-height:1.5;margin:5px 0;border:1px solid}
+.ql{background:#1a2744;padding:5px 20px;font-size:10px}
+.ql a{color:#90caf9;text-decoration:none;margin-right:12px}
+.ql a.g{color:#a5d6a7}.ql a.a{color:#ffcc80}
+.nv{display:flex;border-bottom:2px solid #dee2e6;background:#fff;position:sticky;top:0;z-index:10;flex-wrap:wrap}
+.nv button{flex:1;padding:8px 4px;border:none;background:transparent;font-size:10px;font-weight:600;cursor:pointer;color:#6c757d;border-bottom:3px solid transparent;font-family:inherit;min-width:80px}
+.nv button.on{color:#0f1b2d;border-bottom-color:#1565c0;background:#f8f9ff}
+.pn{display:none;padding:12px 14px}.pn.on{display:block}
+.cd{background:#fff;border:1px solid #dee2e6;border-radius:5px;margin-bottom:8px;overflow:hidden}
+.ch{padding:8px 12px;font-weight:700;font-size:11px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.cb{padding:10px 12px;display:none}.cb.open{display:block}
+.f{margin-bottom:5px}.f label{display:block;font-size:10px;font-weight:600;color:#495057;margin-bottom:1px}
+.f .hp{font-size:9px;color:#868e96;font-style:italic;margin-bottom:1px}
+.f input,.f select,.f textarea{width:100%;padding:5px 6px;border:1px solid #ced4da;border-radius:3px;font-size:11px;font-family:inherit;background:#fff}
+.f textarea{min-height:36px;resize:vertical}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:7px}
+.bd{display:inline-block;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700}
+.bg{background:#e8f5e9;color:#2e7d32}.bb{background:#e3f2fd;color:#1565c0}
+.br{background:#ffebee;color:#c62828}.by{background:#fff8e1;color:#f57f17}
+.bo{background:#fbe9e7;color:#bf360c}.bp{background:#f3e5f5;color:#6a1b9a}
+.al{padding:6px 10px;border-radius:4px;font-size:10px;line-height:1.4;margin:4px 0;border:1px solid}
 .al-i{background:#e3f2fd;border-color:#90caf9;color:#0d47a1}
 .al-s{background:#e8f5e9;border-color:#a5d6a7;color:#1b5e20}
 .al-w{background:#fff3e0;border-color:#ffcc80;color:#e65100}
 .al-d{background:#ffebee;border-color:#ef9a9a;color:#b71c1c}
-.btn{padding:7px 16px;border:none;border-radius:4px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:#fff}
+.btn{padding:6px 14px;border:none;border-radius:4px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:#fff}
 .at{width:100%;border-collapse:collapse;font-size:10px}
-.at th{padding:5px 6px;background:#f8f9fa;border-bottom:2px solid #dee2e6;text-align:left;font-size:9px;text-transform:uppercase;letter-spacing:.5px}
-.at td{padding:5px 6px;border-bottom:1px solid #eee;vertical-align:top}
+.at th{padding:4px 5px;background:#f8f9fa;border-bottom:2px solid #dee2e6;text-align:left;font-size:9px;text-transform:uppercase}
+.at td{padding:4px 5px;border-bottom:1px solid #eee;vertical-align:top}
 .at tr.w{background:#fff3e0}
 .mn{font-family:Consolas,monospace;font-size:9px}
-.hl{margin-bottom:14px;border-radius:6px;overflow:hidden}
-.hh{padding:10px 14px;color:#fff;font-weight:700;font-size:12px}
-.hb{padding:10px 14px;font-size:11px;line-height:1.6}
-.ha{text-align:center;font-size:18px;color:#9e9e9e;margin:3px 0}
-.hc{margin-left:20px;border-left:3px solid #bdbdbd;padding:4px 0 4px 12px;font-size:10px;color:#616161;line-height:1.6}
-@media(max-width:700px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.hl{margin-bottom:12px;border-radius:5px;overflow:hidden}
+.hh{padding:9px 12px;color:#fff;font-weight:700;font-size:11px}
+.hb{padding:9px 12px;font-size:10px;line-height:1.5}
+.ha{text-align:center;font-size:16px;color:#9e9e9e;margin:2px 0}
+.hc{margin-left:16px;border-left:2px solid #bdbdbd;padding:3px 0 3px 10px;font-size:9px;color:#616161;line-height:1.5}
+.wbox{padding:6px 8px;border-radius:4px;font-size:10px;margin:3px 0;line-height:1.4}
+@media(max-width:700px){.g2,.g3,.g4{grid-template-columns:1fr}.nv button{font-size:9px;padding:6px 2px}}
 </style>
 </head>
 <body>
-<div class="hdr"><div class="mx"><div class="tag">Washington County Department of Land Use & Transportation</div><h1>Transportation Review System</h1><p class="sub">Separated specialty forms · Cross-referenced authority mapping · Document hierarchy</p></div></div>
-<div class="qlinks"><div class="mx"><span style="color:#64b5f6;font-weight:700">Refs: </span><a href="https://library.municode.com/or/washington_county/codes/community_development_code?nodeId=ARTVPUFASE_501PUFASERE" target="_blank">CDC §501</a><a href="https://library.municode.com/or/washington_county/codes/community_development_code?nodeId=ARTVPUFASE_502SIST" target="_blank">§502</a><a href="https://library.municode.com/or/washington_county/codes/community_development_code?nodeId=ARTIVDEST_440NOUSST" target="_blank">§440</a><a class="g" href="https://library.municode.com/or/washington_county/codes/code_of_ordinances?nodeId=TIT15COPLRO_CH15.08RODECOST" target="_blank">Road Stds</a><a class="g" href="https://www.washingtoncountyor.gov/lut/planning/transportation-system-plan" target="_blank">TSP</a><a class="a" href="https://www.oregonlegislature.gov/bills_laws/ors/ors197.html" target="_blank">ORS 197</a><a class="a" href="https://supreme.justia.com/cases/federal/us/512/374/" target="_blank">Dolan</a><a class="a" href="https://supreme.justia.com/cases/federal/us/601/22-1074/" target="_blank">Sheetz</a><a class="g" href="https://www.washingtoncountyor.gov/lut/planning/tdt-transport-system-develop-charges" target="_blank">TDT</a></div></div>
-<div class="nav" id="nav"><button class="on" onclick="sp('lu')">📋 Land Use</button><button onclick="sp('eng')">⚙️ Engineering</button><button onclick="sp('auth')">🔗 Authority Map</button><button onclick="sp('hier')">📐 Doc Hierarchy</button><button onclick="sp('rpt')">📄 Report</button></div>
+<div class="hdr"><div class="mx"><div class="tag">Washington County Department of Land Use & Transportation</div><h1>Transportation Review System</h1><p class="sub">Planning · Traffic · Engineering — Cross-referenced with document hierarchy</p></div></div>
+<div class="ql"><div class="mx">
+<span style="color:#64b5f6;font-weight:700">Refs: </span>
+<a href="https://library.municode.com/or/washington_county/codes/community_development_code?nodeId=ARTVPUFASE_501PUFASERE" target="_blank">CDC §501</a>
+<a href="https://library.municode.com/or/washington_county/codes/community_development_code?nodeId=ARTVPUFASE_502SIST" target="_blank">§502</a>
+<a href="https://library.municode.com/or/washington_county/codes/community_development_code?nodeId=ARTIVDEST_440NOUSST" target="_blank">§440</a>
+<a class="g" href="https://library.municode.com/or/washington_county/codes/code_of_ordinances?nodeId=TIT15COPLRO_CH15.08RODECOST" target="_blank">Road Stds</a>
+<a class="g" href="https://www.washingtoncountyor.gov/lut/planning/transportation-system-plan" target="_blank">TSP</a>
+<a class="a" href="https://www.oregonlegislature.gov/bills_laws/ors/ors197.html" target="_blank">ORS 197</a>
+<a class="a" href="https://supreme.justia.com/cases/federal/us/512/374/" target="_blank">Dolan</a>
+<a class="a" href="https://supreme.justia.com/cases/federal/us/601/22-1074/" target="_blank">Sheetz</a>
+<a class="g" href="https://www.washingtoncountyor.gov/lut/planning/tdt-transport-system-develop-charges" target="_blank">TDT</a>
+</div></div>
+
+<div class="nv" id="nv">
+<button class="on" onclick="sp('pl')">📋 Planning</button>
+<button onclick="sp('tr')">🚗 Traffic</button>
+<button onclick="sp('en')">⚙️ Engineering</button>
+<button onclick="sp('au')">🔗 Authority</button>
+<button onclick="sp('hi')">📐 Hierarchy</button>
+<button onclick="sp('rp')">📄 Report</button>
+</div>
 <div class="mx">
 
-<!-- LAND USE -->
-<div class="pnl on" id="pLu">
-<div style="margin-bottom:8px"><span class="bd bb" style="font-size:11px;padding:3px 8px">LAND USE REVIEW</span> <span style="font-size:10px;color:#6c757d">CDC Article V · TSP · Comprehensive Plan</span></div>
-<div class="card"><div class="chd" onclick="tg(this)" style="background:#1565c0;color:#fff">CDC §501-2 — Application Type <span>▾</span></div><div class="cbd open">
-<div class="field"><label>Application Type per §501-2</label><select id="luApp" onchange="luChg()" style="font-weight:600;padding:8px;font-size:12px;border-color:#1565c0"><option value="">— Select —</option><optgroup label="Full Article V"><option value="full">§501-2.1/2.2/2.3/2.4 — Land Division / New Structure / Change in Use / Parking</option></optgroup><optgroup label="Limited (§501-2.6)"><option value="limited">§501-2.6 B — Single Dwelling / Duplex / MH (shared lot)</option><option value="expansion">§501-2.6 C — Dwelling Expansion >2,000 sf</option><option value="mhld">§501-2.6 D — Middle Housing Land Division</option></optgroup><optgroup label="Other"><option value="adu">§501-2.6 A — ADU (access only)</option><option value="exempt">§501-2.2 B/2.7 — Exempt (TDT only)</option><option value="nonconf">§440-10 — Nonconforming Access (≥25% ADT)</option><option value="outside">§501-9 — Outside UGB</option></optgroup></select></div><div id="luInfo"></div>
+<div class="pn on" id="pPl">
+<div style="margin-bottom:6px"><span class="bd bb" style="font-size:10px;padding:3px 7px">PLANNING REVIEW</span> <span style="font-size:9px;color:#6c757d">CDC Article V · TSP Goals/Policies/Overlays · Comprehensive Plan</span></div>
+
+<!-- Application Type -->
+<div class="cd"><div class="ch" onclick="tg(this)" style="background:#1565c0;color:#fff">CDC §501-2 — Application Type <span>▾</span></div><div class="cb open">
+<div class="f"><label>Application Type per §501-2</label><select id="plApp" onchange="plChg()" style="font-weight:600;padding:7px;font-size:12px;border-color:#1565c0">
+<option value="">— Select per §501-2 —</option>
+<optgroup label="Full Article V"><option value="full">§501-2.1/2.2/2.3/2.4 — Land Division / New Structure / Change in Use / Parking</option></optgroup>
+<optgroup label="Limited (§501-2.6)"><option value="limited">§501-2.6 B — Single Dwelling / Duplex / MH (shared lot)</option><option value="expansion">§501-2.6 C — Dwelling Expansion >2,000 sf</option><option value="mhld">§501-2.6 D — Middle Housing Land Division</option></optgroup>
+<optgroup label="Other"><option value="adu">§501-2.6 A — ADU (access only)</option><option value="exempt">§501-2.2 B/2.7 — Exempt (TDT only)</option><option value="nonconf">§440-10 — Nonconforming Access ≥25% ADT</option><option value="outside">§501-9 — Outside UGB</option></optgroup>
+</select></div><div id="plInfo"></div>
 </div></div>
-<div class="card"><div class="chd" onclick="tg(this)" style="background:#e8f5e9;color:#2e7d32">TSP Classification & Project Data <span>▸</span></div><div class="cbd">
-<div class="g3"><div class="field"><label>Road Name</label><input id="luRoad"></div><div class="field"><label>TSP Classification</label><select id="luCls" onchange="luClsChg()"><option value="">Select...</option><option>Arterial</option><option>Collector</option><option>Neighborhood Route</option><option>Local</option><option>Commercial/Industrial</option></select></div><div class="field"><label>Frontage (ft)</label><input id="luFront"></div></div>
-<div id="luGoals"></div>
-<div class="g4"><div class="field"><label>Proposed Use</label><input id="luUse"></div><div class="field"><label>ITE Code</label><input id="luIte"></div><div class="field"><label>ADT</label><input id="luAdt"></div><div class="field"><label>PM Peak</label><input id="luPk"></div></div>
-<div class="g4"><div class="field"><label>Trip Basis</label><input id="luBasis"></div><div class="field"><label>Count</label><input id="luCnt"></div><div class="field"><label>Report Firm</label><input id="luFirm"></div><div class="field"><label>Exhibit</label><input id="luExh" style="width:50px"></div></div>
-<div class="g4"><div class="field"><label>Acreage</label><input id="luAc"></div><div class="field"><label>Assessor Map</label><input id="luMap"></div><div class="field"><label>Tax Lot</label><input id="luTL"></div><div class="field"><label>Speed (mph)</label><input id="luSpd"></div></div>
+
+<!-- TSP & Overlays -->
+<div class="cd"><div class="ch" onclick="tg(this)" style="background:#2e7d32;color:#fff">TSP Classification, Overlays & Modal Elements <span>▸</span></div><div class="cb">
+<div class="g3">
+<div class="f"><label>Road Name</label><input id="plRoad" oninput="document.getElementById('eRoad').value=this.value"></div>
+<div class="f"><label>TSP Functional Classification</label><select id="plCls" onchange="plClsChg()"><option value="">Select...</option><option>Arterial</option><option>Collector</option><option>Neighborhood Route</option><option>Local</option><option>Commercial/Industrial</option></select></div>
+<div class="f"><label>Frontage (ft)</label><input id="plFront"></div>
+</div>
+<div id="plGoals"></div>
+<div style="margin-top:6px;padding:6px 8px;background:#f8f9fa;border-radius:4px;border:1px solid #e0e0e0">
+<div style="font-weight:700;font-size:10px;margin-bottom:4px;color:#2e7d32">TSP OVERLAYS & DESIGNATIONS (Table 3 / System Maps)</div>
+<div class="g3">
+<div class="f"><label>Streetscape Overlay?</label><select id="plStreetscape" onchange="checkOverlays()"><option value="no">No</option><option value="yes">Yes — enhanced ped/bike/transit design</option></select></div>
+<div class="f"><label>Enhanced Major Street Bikeway?</label><select id="plEMSB" onchange="checkOverlays()"><option value="no">No</option><option value="yes">Yes — buffered bike lanes per Bicycle Facility Design Toolkit</option></select></div>
+<div class="f"><label>Pedestrian Parkway?</label><select id="plPedPkwy" onchange="checkOverlays()"><option value="no">No</option><option value="yes">Yes — enhanced ped environment</option></select></div>
+</div>
+<div class="g3">
+<div class="f"><label>Ped/Bike District?</label><select id="plPedDist" onchange="checkOverlays()"><option value="no">No</option><option value="yes">Yes — per Pedestrian System Map</option></select></div>
+<div class="f"><label>Safe Routes to School?</label><select id="plSRTS" onchange="checkOverlays()"><option value="no">No</option><option value="yes">Yes — school within ½ mile</option></select></div>
+<div class="f"><label>Complete Streets Applicable?</label><select id="plCS" onchange="checkOverlays()"><option value="yes">Yes — urban area default (TSP Goal 8)</option><option value="no">No — rural/exception</option></select></div>
+</div>
+<div class="g2">
+<div class="f"><label>Transit Service</label><select id="plTransit"><option value="none">None within ¼ mi</option><option value="regular">Regular</option><option value="frequent">Frequent</option></select></div>
+<div class="f"><label>Trail Designation</label><select id="plTrail"><option value="none">None</option><option value="regional">Regional Trail (TSP Ped Map)</option><option value="community">Community Trail</option></select></div>
+</div>
+</div>
+<div id="plOverlayInfo"></div>
 </div></div>
-<div class="card"><div class="chd" onclick="tg(this)" style="background:#ffebee;color:#c62828">Access & Safety <span>▸</span></div><div class="cbd">
-<div class="g3"><div class="field"><label>Plat Restriction?</label><select id="luPlat"><option value="no">No</option><option value="yes">Yes</option></select></div><div class="field"><label>Unpermitted Access?</label><select id="luUnp"><option value="no">No</option><option value="yes">Yes</option></select></div><div class="field"><label>Trip >25%?</label><select id="luT25"><option value="no">No</option><option value="yes">Yes</option></select></div></div>
-<div class="g3"><div class="field"><label>SPIS Hazardous?</label><select id="luSpis"><option value="no">No</option><option value="yes">Yes</option></select></div><div class="field"><label>Off-Site Warrants?</label><select id="luOff"><option value="no">No</option><option value="yes">Yes</option></select></div><div class="field"><label>Deposit ($)</label><input id="luDep" value="18,000"></div></div>
+
+<!-- Project Info -->
+<div class="cd"><div class="ch" onclick="tg(this)" style="background:#f3e5f5;color:#6a1b9a">Project Information <span>▸</span></div><div class="cb">
+<div class="g4">
+<div class="f"><label>Proposed Use</label><input id="plUse"></div>
+<div class="f"><label>Acreage</label><input id="plAc"></div>
+<div class="f"><label>Assessor Map</label><input id="plMap"></div>
+<div class="f"><label>Tax Lot</label><input id="plTL"></div>
+</div>
+<div class="g3">
+<div class="f"><label>Applicant</label><input id="plApplicant"></div>
+<div class="f"><label>Case Number</label><input id="plCase"></div>
+<div class="f"><label>Speed (mph)</label><input id="plSpd"></div>
+</div>
 </div></div>
 </div>
 
-<!-- ENGINEERING -->
-<div class="pnl" id="pEng">
-<div style="margin-bottom:8px"><span class="bd bg" style="font-size:11px;padding:3px 8px">ENGINEERING REVIEW</span> <span style="font-size:10px;color:#6c757d">Road Standards (WCCO Title 15, Ch. 15.08) · Facility Permit · ROW Permit</span></div>
-<div class="card"><div class="chd" onclick="tg(this)" style="background:#2e7d32;color:#fff">Road Designation (Exhibits 1-6) <span>▾</span></div><div class="cbd open">
-<div class="g2"><div class="field"><label>Designation</label><select id="eDes" onchange="eDesChg()" style="font-weight:600;padding:8px;font-size:12px;border-color:#2e7d32"></select></div><div class="field"><label>Road Name</label><input id="eRoad" readonly style="background:#f5f5f5"></div></div>
-<div id="eDesInf"></div>
-<div class="g4"><div class="field"><label>Existing ROW (ft)</label><input id="eROW" oninput="eDef()"></div><div class="field"><label>Existing Paved (ft)</label><input id="ePav"></div><div class="field"><label>CL to Property (ft)</label><input id="eCL"></div><div class="field"><label>Surface</label><select id="eSurf"><option>Paved</option><option>Gravel</option></select></div></div>
-<div id="eDeficit"></div><div id="eAlign"></div>
+<div class="pn" id="pTr">
+<div style="margin-bottom:6px"><span class="bd bo" style="font-size:10px;padding:3px 7px">TRAFFIC REVIEW</span> <span style="font-size:9px;color:#6c757d">Trip Generation · R&O 86-95 Analysis · Signal & Turn Lane Warrants · ADA</span></div>
+
+<!-- Trip Generation -->
+<div class="cd"><div class="ch" onclick="tg(this)" style="background:#e65100;color:#fff">Trip Generation <span>▾</span></div><div class="cb open">
+<div class="g4">
+<div class="f"><label>ITE Land Use Code</label><input id="trIte" placeholder="e.g., 180"></div>
+<div class="f"><label>ITE Land Use Name</label><input id="trIteName" placeholder="e.g., Specialty Trade Contractor"></div>
+<div class="f"><label>Trip Basis</label><input id="trBasis" placeholder="employees, sqft, units"></div>
+<div class="f"><label>Count</label><input id="trCnt"></div>
+</div>
+<div class="g3">
+<div class="f"><label>Average Daily Trips (ADT)</label><input id="trAdt" oninput="trCalcThresholds()"></div>
+<div class="f"><label>AM Peak-Hour Trips</label><input id="trAM"></div>
+<div class="f"><label>PM Peak-Hour Trips</label><input id="trPM"></div>
+</div>
+<div class="g3">
+<div class="f"><label>Report Prepared By</label><input id="trFirm"></div>
+<div class="f"><label>Report Exhibit</label><input id="trExh" style="width:60px"></div>
+<div class="f"><label>Existing ADT at Access Point</label><input id="trExistAdt" placeholder="Current traffic volume" oninput="trCalcThresholds()"></div>
+</div>
+<div id="trThresholds"></div>
 </div></div>
-<div class="card"><div class="chd" onclick="tg(this)" style="background:#e8f5e9;color:#2e7d32">Improvements Checklist (§130.030) <span>▸</span></div><div class="cbd"><div style="font-size:10px;color:#6c757d;margin-bottom:6px">Items without CDC authority show ⚠ — these cannot be conditioned.</div><div id="eChk"></div></div></div>
-<div class="card"><div class="chd" onclick="tg(this)" style="background:#fff3e0;color:#e65100">Permits & Exceptions <span>▸</span></div><div class="cbd">
-<div class="g2"><div class="field"><label>Facility Permit?</label><select id="eFac"><option value="yes">Yes</option><option value="no">No</option></select></div><div class="field"><label>ROW Permit? (§130.020)</label><select id="eRowP"><option value="no">No</option><option value="yes">Yes</option></select></div></div>
-<div class="field"><label>Design Exception? (§220)</label><select id="eExc" onchange="document.getElementById('eExcD').style.display=this.value==='yes'?'block':'none'"><option value="no">No</option><option value="yes">Yes</option></select></div>
-<div id="eExcD" style="display:none"><div class="al al-w"><strong>§220.020.1 Criteria:</strong> (a) Standard doesn't apply; (b) Topography/ROW hardship + equivalent alternative; (c) Minor change for specific design problem</div><div class="field"><label>Exception Basis</label><textarea id="eExcBasis"></textarea></div></div>
-<div class="field"><label>Engineer Notes</label><textarea id="eNotes"></textarea></div>
+
+<!-- R&O 86-95 Analysis -->
+<div class="cd"><div class="ch" onclick="tg(this)" style="background:#c62828;color:#fff">R&O 86-95 — Traffic Safety Analysis <span>▸</span></div><div class="cb">
+<div class="al al-i" style="margin-top:0">R&O 86-95 uses existing and predicted hazards to determine safety improvements as conditions of development. Two categories: <strong>D.1 Frontage Improvements</strong> (always apply) and <strong>D.2 Impact Area Improvements</strong> (when site traffic ≥ 10% of existing).</div>
+<div class="g2" style="margin-top:6px">
+<div class="f"><label>Site Traffic ≥ 10% of Existing ADT?</label><select id="tr10pct" onchange="trImpactChg()"><option value="no">No — frontage improvements only</option><option value="yes">Yes — impact area improvements also apply</option></select></div>
+<div class="f"><label>Trip Increase ≥ 25%? (§440-10 trigger)</label><select id="tr25pct"><option value="no">No</option><option value="yes">Yes — access conformance required</option></select></div>
+</div>
+<div style="margin-top:6px;padding:6px 8px;background:#fff5f5;border:1px solid #ffcdd2;border-radius:4px">
+<div style="font-weight:700;font-size:10px;color:#c62828;margin-bottom:3px">D.1 FRONTAGE IMPROVEMENTS (always warranted per R&O 86-95 App B)</div>
+<div class="g2">
+<div class="f"><label>1. Signal warrant met? (MUTCD)</label><select id="trFrSig"><option value="no">No</option><option value="yes">Yes — signalize per D.1.2.2</option></select></div>
+<div class="f"><label>2. Left turn refuge warranted? (AASHTO)</label><select id="trFrLT"><option value="no">No</option><option value="yes">Yes — install per AASHTO</option></select></div>
+</div>
+<div class="g2">
+<div class="f"><label>3. Sidewalks (ultimate location/grade)</label><select id="trFrSW"><option value="yes">Yes — required per D.1.2.2</option><option value="exception">Exception per CDC §501-5.4</option></select></div>
+<div class="f"><label>4. Sight distance meets standards?</label><select id="trFrSD"><option value="yes">Meets standard</option><option value="no">Does not meet — improvement required</option></select></div>
+</div>
+<div class="g2">
+<div class="f"><label>5. Frontage intersection lighting adequate?</label><select id="trFrLight"><option value="no">No — illumination required (AASHTO)</option><option value="yes">Adequate</option></select></div>
+<div class="f"><label>6. Access point lighting adequate?</label><select id="trFrAccLight"><option value="no">No — illumination required</option><option value="yes">Adequate</option></select></div>
+</div>
+</div>
+<div id="trImpactArea" style="display:none;margin-top:6px;padding:6px 8px;background:#fff8e1;border:1px solid #fff176;border-radius:4px">
+<div style="font-weight:700;font-size:10px;color:#f57f17;margin-bottom:3px">D.2 IMPACT AREA IMPROVEMENTS (when ≥ 10% of existing)</div>
+<div class="g2">
+<div class="f"><label>D.2.1 Existing Hazard — SPIS Rating</label><input id="trSpis" placeholder="≥32.24 = hazardous"></div>
+<div class="f"><label>SPIS Hazardous?</label><select id="trSpisHaz"><option value="no">No (<32.24)</option><option value="yes">Yes (≥32.24) — improve per B/C ≥ 1</option></select></div>
+</div>
+<div class="g2">
+<div class="f"><label>D.2.2.1 Signal warrant (total traffic)?</label><select id="trImpSig"><option value="no">No</option><option value="yes">Yes — signalize</option></select></div>
+<div class="f"><label>D.2.2.2 Left turn refuge (total traffic)?</label><select id="trImpLT"><option value="no">No</option><option value="yes">Yes — install where warranted by AASHTO</option></select></div>
+</div>
+<div class="f"><label>D.2.2.6 Off-site sidewalks needed?</label><select id="trImpSW"><option value="no">No</option><option value="yes">Yes — safe pedestrian travel to existing network / ped draw area</option></select></div>
+<div class="f"><label>Off-site warrant description</label><textarea id="trImpDesc" placeholder="Describe warranted improvements and locations..."></textarea></div>
+</div>
+</div></div>
+
+<!-- Signal Warrants (MUTCD) -->
+<div class="cd"><div class="ch" onclick="tg(this)" style="background:#ff8f00;color:#fff">Signal Warrant Analysis (MUTCD Ch. 4C) <span>▸</span></div><div class="cb">
+<div class="al al-w" style="margin-top:0">MUTCD Chapter 4C provides 9 warrants. An engineering study must confirm at least one warrant is met before signalization can be required. Per R&O 86-95 D.1.2.2, Level of Service shall be "D" or better except for a 20-minute period where LOS "E" is tolerated.</div>
+<div style="font-size:10px;line-height:1.6;margin-top:4px">
+<div class="g2">
+<div class="f"><label>Warrant 1: Eight-Hour Vehicular Volume</label><select id="trW1" onchange="trWCheck()"><option value="">Not evaluated</option><option value="met">MET</option><option value="not">Not met</option></select></div>
+<div class="f"><label>Warrant 2: Four-Hour Vehicular Volume</label><select id="trW2" onchange="trWCheck()"><option value="">Not evaluated</option><option value="met">MET</option><option value="not">Not met</option></select></div>
+</div>
+<div class="g2">
+<div class="f"><label>Warrant 3: Peak Hour</label><select id="trW3" onchange="trWCheck()"><option value="">Not evaluated</option><option value="met">MET</option><option value="not">Not met</option></select></div>
+<div class="f"><label>Warrant 4: Pedestrian Volume</label><select id="trW4" onchange="trWCheck()"><option value="">Not evaluated</option><option value="met">MET</option><option value="not">Not met</option></select></div>
+</div>
+<div class="g2">
+<div class="f"><label>Warrant 5: School Crossing</label><select id="trW5" onchange="trWCheck()"><option value="">Not evaluated</option><option value="met">MET</option><option value="not">Not met</option></select></div>
+<div class="f"><label>Warrant 6: Coordinated Signal System</label><select id="trW6" onchange="trWCheck()"><option value="">Not evaluated</option><option value="met">MET</option><option value="not">Not met</option></select></div>
+</div>
+<div class="g2">
+<div class="f"><label>Warrant 7: Crash Experience</label><select id="trW7" onchange="trWCheck()"><option value="">Not evaluated</option><option value="met">MET</option><option value="not">Not met</option></select></div>
+<div class="f"><label>Warrant 8: Roadway Network</label><select id="trW8" onchange="trWCheck()"><option value="">Not evaluated</option><option value="met">MET</option><option value="not">Not met</option></select></div>
+</div>
+<div class="f"><label>Warrant 9: Intersection Near Grade Crossing</label><select id="trW9" onchange="trWCheck()"><option value="">Not evaluated</option><option value="met">MET</option><option value="not">Not met</option></select></div>
+<div id="trWarrantResult"></div>
+</div></div>
+
+<!-- Turn Lane Warrants (AASHTO) -->
+<div class="cd"><div class="ch" onclick="tg(this)" style="background:#6d4c41;color:#fff">Turn Lane Warrant Analysis (AASHTO) <span>▸</span></div><div class="cb">
+<div class="al al-w" style="margin-top:0">AASHTO "Policy on Geometric Design of Highways and Streets" provides warrant criteria for left and right turn lanes based on opposing traffic volume, turning volume, and speed. Per R&O 86-95, left turn refuge lanes are warranted on frontage roads (D.1.2.2) and at impact area intersections (D.2.2.2).</div>
+<div class="g3">
+<div class="f"><label>Opposing Traffic Volume (vph)</label><input id="trOpp" placeholder="Vehicles per hour"></div>
+<div class="f"><label>Left Turn Volume (vph)</label><input id="trLTV" placeholder="Left turns per hour"></div>
+<div class="f"><label>Approach Speed (mph)</label><input id="trTLSpd" placeholder="Design speed"></div>
+</div>
+<div class="g2">
+<div class="f"><label>Left Turn Lane Warranted?</label><select id="trLTW"><option value="">Not evaluated</option><option value="yes">Yes — per AASHTO warrant chart</option><option value="no">No</option></select></div>
+<div class="f"><label>Right Turn Lane Warranted?</label><select id="trRTW"><option value="">Not evaluated</option><option value="yes">Yes — per AASHTO/traffic analysis</option><option value="no">No</option></select></div>
+</div>
+</div></div>
+
+<!-- ADA -->
+<div class="cd"><div class="ch" onclick="tg(this)" style="background:#283593;color:#fff">ADA / PROWAG Requirements <span>▸</span></div><div class="cb">
+<div class="al al-i" style="margin-top:0">The Americans with Disabilities Act and Public Right-of-Way Accessibility Guidelines (PROWAG) require accessible pedestrian facilities. These apply to <strong>all</strong> new construction and alterations in the public ROW regardless of CDC applicability tier.</div>
+<div class="g2">
+<div class="f"><label>Curb Ramps at All Crossings?</label><select id="trADA1"><option value="needed">Needed — new/reconstruct per PROWAG R304</option><option value="exists">Existing ramps meet current standards</option><option value="na">N/A — no crossings</option></select></div>
+<div class="f"><label>Detectable Warning Surfaces?</label><select id="trADA2"><option value="needed">Needed — truncated domes per PROWAG R305</option><option value="exists">Existing</option><option value="na">N/A</option></select></div>
+</div>
+<div class="g2">
+<div class="f"><label>Sidewalk Cross-Slope ≤ 2%?</label><select id="trADA3"><option value="yes">Will meet standard</option><option value="no">Exceeds 2% — correction needed</option></select></div>
+<div class="f"><label>Min Clear Width (4ft min, 5ft pref)?</label><select id="trADA4"><option value="5ft">5ft or greater</option><option value="4ft">4ft minimum</option><option value="no">Below 4ft — ADA violation</option></select></div>
+</div>
+<div class="g2">
+<div class="f"><label>Accessible Pedestrian Signal?</label><select id="trADA5"><option value="na">N/A — no signalized crossing</option><option value="needed">Needed at signalized intersection</option><option value="exists">Existing</option></select></div>
+<div class="f"><label>Transit Stop Accessible Route?</label><select id="trADA6"><option value="na">N/A — no transit stop</option><option value="needed">Needed — accessible connection required</option><option value="exists">Existing</option></select></div>
+</div>
+</div></div>
+</div>
+</div>
+
+<div class="pn" id="pEn">
+<div style="margin-bottom:6px"><span class="bd bg" style="font-size:10px;padding:3px 7px">ENGINEERING REVIEW</span> <span style="font-size:9px;color:#6c757d">Road Standards (WCCO Title 15, Ch. 15.08) · Facility Permit · ROW Permit</span></div>
+<div class="cd"><div class="ch" onclick="tg(this)" style="background:#2e7d32;color:#fff">Road Designation (Exhibits 1-6) <span>▾</span></div><div class="cb open">
+<div class="g2">
+<div class="f"><label>Designation</label><select id="eDes" onchange="eDesChg()" style="font-weight:600;padding:7px;font-size:12px;border-color:#2e7d32"></select></div>
+<div class="f"><label>Road Name</label><input id="eRoad" readonly style="background:#f5f5f5"></div>
+</div>
+<div id="eDesI"></div>
+<div class="g4">
+<div class="f"><label>Existing ROW (ft)</label><input id="eROW" oninput="eDef()"></div>
+<div class="f"><label>Existing Paved (ft)</label><input id="ePav"></div>
+<div class="f"><label>CL to Property (ft)</label><input id="eCL"></div>
+<div class="f"><label>Surface</label><select id="eSurf"><option>Paved</option><option>Gravel</option></select></div>
+</div>
+<div id="eDft"></div><div id="eAln"></div>
+</div></div>
+<div class="cd"><div class="ch" onclick="tg(this)" style="background:#e8f5e9;color:#2e7d32">Improvements Checklist (§130.030) — with CDC Authority Warnings <span>▸</span></div><div class="cb"><div style="font-size:9px;color:#6c757d;margin-bottom:4px">⚠ = Road Standards require but CDC does not authorize for selected application type.</div><div id="eChk"></div></div></div>
+<div class="cd"><div class="ch" onclick="tg(this)" style="background:#fff3e0;color:#e65100">Permits & Exceptions <span>▸</span></div><div class="cb">
+<div class="g2">
+<div class="f"><label>Facility Permit?</label><select id="eFac"><option value="yes">Yes</option><option value="no">No</option></select></div>
+<div class="f"><label>ROW Permit? (§130.020)</label><select id="eRowP"><option value="no">No</option><option value="yes">Yes</option></select></div>
+</div>
+<div class="f"><label>Design Exception? (§220)</label><select id="eExc" onchange="document.getElementById('eExcD').style.display=this.value==='yes'?'block':'none'"><option value="no">No</option><option value="yes">Yes</option></select></div>
+<div id="eExcD" style="display:none"><div class="al al-w"><strong>§220.020.1 Criteria:</strong> (a) Standard doesn't apply; (b) Topography/ROW hardship + equivalent alternative; (c) Minor change for specific design problem</div><div class="f"><label>Exception Basis</label><textarea id="eExcB"></textarea></div></div>
+<div class="f"><label>Admin Deposit ($)</label><input id="eDep" value="18,000"></div>
+<div class="f"><label>Engineer Notes</label><textarea id="eNotes"></textarea></div>
 </div></div>
 </div>
 
-<!-- AUTHORITY MAP -->
-<div class="pnl" id="pAuth">
-<div style="margin-bottom:8px"><span class="bd" style="background:#f3e5f5;color:#6a1b9a;font-size:11px;padding:3px 8px">AUTHORITY MAP</span> <span style="font-size:10px;color:#6c757d">Road Standard → CDC → TSP for every improvement</span></div>
-<div class="al al-i" style="margin-bottom:8px">Each row shows the engineering requirement, its CDC authorization, and the TSP goal it serves. <span class="bd br">⚠ NO AUTHORITY</span> = cannot condition without Dolan/Sheetz risk.</div>
-<div id="authTbl"></div>
+<div class="pn" id="pAu">
+<div style="margin-bottom:6px"><span class="bd bp" style="font-size:10px;padding:3px 7px">AUTHORITY MAP</span> <span style="font-size:9px;color:#6c757d">Road Standard → CDC → TSP Goal — for every improvement</span></div>
+<div class="al al-i" style="margin-bottom:6px"><span class="bd br">⚠ NO CDC</span> = cannot condition without Dolan/Sheetz risk. <span class="bd by">⚠ OVERLAY</span> = TSP overlay adds requirements beyond base designation.</div>
+<div id="auTbl"></div>
 </div>
 
-<!-- HIERARCHY -->
-<div class="pnl" id="pHier">
-<div style="margin-bottom:8px"><span class="bd bo" style="font-size:11px;padding:3px 8px">DOCUMENT HIERARCHY</span></div>
-<div class="hl"><div class="hh" style="background:#0d47a1">1. COMPREHENSIVE FRAMEWORK PLAN <span style="float:right;font-size:9px;font-weight:400">Parent Document</span></div><div class="hb" style="background:#e3f2fd;border:1px solid #90caf9"><strong>Role:</strong> Supreme local policy. All other documents must be consistent. Adopted by Board of Commissioners. Acknowledged by DLCD per ORS 197.251.<br><strong>Contains:</strong> Community Plans, Area of Special Concern policies, urban/rural boundaries.<div class="hc">Adopts → TSP (as element) · Implemented by → CDC · Supported by → Community Plans</div></div></div>
-<div class="ha">▼</div>
-<div class="hl"><div class="hh" style="background:#2e7d32">2. TRANSPORTATION SYSTEM PLAN <span style="float:right;font-size:9px;font-weight:400">Child of Comp Plan — Policy</span></div><div class="hb" style="background:#e8f5e9;border:1px solid #a5d6a7"><strong>Role:</strong> 20-year transportation policy element. Establishes functional classifications, Table 3 design parameters, modal elements, goals/objectives/strategies.<br><strong>Legal basis:</strong> Goal 12, TPR (OAR 660-012), Metro RTFP.<br><strong>Key link:</strong> CDC §501-8.4 requires ROW "pursuant to TSP classification and Road Standards." TSP classification = bridge between policy and technical design.<div class="hc">Parent → Comp Plan · Implemented by → CDC §501-8 · Technical standards → Road Design Stds</div></div></div>
-<div class="ha">▼</div>
-<div class="hl"><div class="hh" style="background:#1565c0">3. COMMUNITY DEVELOPMENT CODE <span style="float:right;font-size:9px;font-weight:400">Implements Comp Plan & TSP — Regulatory</span></div><div class="hb" style="background:#e3f2fd;border:1px solid #90caf9"><strong>Role:</strong> Regulatory code implementing the Comp Plan. Article V = transportation chapter. Determines <em>what can be conditioned</em> — the legal authority for exactions.<br><strong>Critical:</strong> Without a CDC section authorizing a requirement, it cannot be imposed regardless of Road Standards. This is where Nollan/Dolan/Sheetz applies.<br><strong>Key:</strong> §501-8.8 A lists 12 half-street elements. §130.030 lists 11 (CDC adds ped/bike crossings). CDC controls per Road Std §120.010.<div class="hc">Parent → Comp Plan · References → TSP classifications · Authorizes → Road Stds · References → R&O 86-95</div></div></div>
-<div class="ha">▼</div>
-<div class="hl"><div class="hh" style="background:#e65100">4. ROAD DESIGN & CONSTRUCTION STANDARDS <span style="float:right;font-size:9px;font-weight:400">Technical — Younger Sibling of CDC</span></div><div class="hb" style="background:#fbe9e7;border:1px solid #ffcc80"><strong>Role:</strong> Technical engineering manual. Specifies cross-sections (Exhibits 1-6), structural design, drainage, construction methods. WCCO Title 15 Ch. 15.08.<br><strong>Limitation:</strong> Cannot expand what CDC authorizes. If CDC doesn't authorize half-street for a use type, the Exhibit cross-section is irrelevant to conditioning.<br><strong>Relationship:</strong> "Younger sibling" — adopted separately, implements same parent policies. CDC controls <em>what</em>; Road Stds control <em>how</em>. When they conflict, CDC controls (§120.010).<div class="hc">Parent policy → Comp Plan + TSP · Authority → CDC Article V · Implements → TSP Table 3 (Exhibits 1-6)</div></div></div>
-<div style="margin-top:12px;padding:12px;background:#fff;border:1px solid #dee2e6;border-radius:6px;font-size:11px;line-height:1.6">
-<strong>The gap that creates legal risk:</strong> an engineering requirement from Road Standards that has no CDC section authorizing it for the specific application type. The Authority Map tab flags these gaps.
-</div>
+<div class="pn" id="pHi">
+<div class="hl"><div class="hh" style="background:#0d47a1">1. COMPREHENSIVE FRAMEWORK PLAN <span style="float:right;font-size:9px;font-weight:400">Parent</span></div><div class="hb" style="background:#e3f2fd;border:1px solid #90caf9">Supreme local policy. All other documents must be consistent. Per ORS 197.175/197.251.<div class="hc">Adopts → TSP · Implemented by → CDC · Supported by → Community Plans</div></div></div><div class="ha">▼</div>
+<div class="hl"><div class="hh" style="background:#2e7d32">2. TRANSPORTATION SYSTEM PLAN <span style="float:right;font-size:9px;font-weight:400">Child — Policy Element</span></div><div class="hb" style="background:#e8f5e9;border:1px solid #a5d6a7">20-year policy. Functional classifications, Table 3, modal elements, goals. Overlays: Streetscape, Enhanced Major Street Bikeway, Pedestrian Parkway, Ped/Bike Districts. Complete Streets = default for urban area.<div class="hc">Parent → Comp Plan · Implemented by → CDC §501-8 · Technical → Road Stds</div></div></div><div class="ha">▼</div>
+<div class="hl"><div class="hh" style="background:#1565c0">3. COMMUNITY DEVELOPMENT CODE <span style="float:right;font-size:9px;font-weight:400">Implements — Regulatory</span></div><div class="hb" style="background:#e3f2fd;border:1px solid #90caf9">Regulatory code. Article V = transportation. Controls <em>what can be conditioned</em>. Without CDC authority, Road Standards are irrelevant. Nollan/Dolan/Sheetz applies here.<div class="hc">Parent → Comp Plan · References → TSP · Authorizes → Road Stds</div></div></div><div class="ha">▼</div>
+<div class="hl"><div class="hh" style="background:#e65100">4. ROAD DESIGN & CONSTRUCTION STANDARDS <span style="float:right;font-size:9px;font-weight:400">Technical — Younger Sibling</span></div><div class="hb" style="background:#fbe9e7;border:1px solid #ffcc80">Technical manual. Cross-sections, construction methods. Cannot expand what CDC authorizes. CDC controls <em>what</em>; Road Stds control <em>how</em>. Per §120.010, plans must conform to both — CDC is the regulatory authority.<div class="hc">Parent policy → Comp Plan + TSP · Authority → CDC</div></div></div>
 </div>
 
-<!-- REPORT -->
-<div class="pnl" id="pRpt">
-<div style="display:flex;gap:6px;margin-bottom:8px"><button class="btn" onclick="cpRpt()" style="background:#2e7d32" id="cpBtn">Copy</button><button class="btn" onclick="dlRpt()" style="background:#4527a0">Download</button></div>
-<pre id="rptO" style="background:#fff;border:1px solid #ced4da;border-radius:6px;padding:14px;font-size:10px;line-height:1.7;white-space:pre-wrap;font-family:Consolas,monospace;max-height:75vh;overflow:auto"></pre>
+<div class="pn" id="pRp">
+<div style="display:flex;gap:6px;margin-bottom:6px"><button class="btn" onclick="cpR()" style="background:#2e7d32" id="cpB">Copy</button><button class="btn" onclick="dlR()" style="background:#4527a0">Download</button></div>
+<pre id="rO" style="background:#fff;border:1px solid #ced4da;border-radius:5px;padding:12px;font-size:10px;line-height:1.7;white-space:pre-wrap;font-family:Consolas,monospace;max-height:75vh;overflow:auto"></pre>
 </div>
 </div>
-
 <script>
 const D={
 "A-1":{r:122,p:98,l:7,b:6,t:12,c:14,x:1,cl:"Arterial",s:45},
@@ -138,146 +317,174 @@ const D={
 "L-2":{r:38,p:32,l:2,b:0,t:16,c:0,x:4,cl:"Local",s:25},
 "CI-1":{r:54,p:40,l:2,b:0,t:12,c:0,x:5,cl:"Commercial/Industrial",s:25}
 };
+// TSP Table 3 overlay variants (additional ROW/paved beyond base)
+const OV={
+  streetscape:{art5:{r:102,p:78},art3:{r:90,p:54},col5:{r:102,p:74},col3:{r:78,p:50},col2:{r:74,p:38}},
+  emsb:{art5:{r:102,p:78},art3:{r:90,p:54},col5:{r:102,p:78},col3:{r:78,p:54},col2:{r:74,p:38}},
+  both:{art5:{r:106,p:78},art3:{r:90,p:54},col5:{r:106,p:78},col3:{r:82,p:54}}
+};
 const AM=[
-{id:"row",lb:"ROW Dedication",rs:"Exhibits 1-6; §130.040",
- cd:{full:"§501-8.4 A",limited:"§501-8.1 B(2)(a) minimums",mhld:"§501-8.1 B(2)(b) full",expansion:"§501-8.4 B(1) minimums",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"§501-8.4 via §501-9.3"},
- ts:"Goal 5: Mobility — Strategy 5.1.2; Table 3"},
-{id:"half",lb:"Half-Street Paving",rs:"§130.030(b)(c); Exhibits 1-6",
- cd:{full:"§501-8.1 B(9) / §501-8.2 G; §501-8.8 A",limited:"N/A",mhld:"§501-8.1 B(9)/§501-8.2 G — lots only",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},
- ts:"Goal 3: Safety; Goal 5: Mobility"},
-{id:"curb",lb:"Curb & Gutter",rs:"§340.050; Dwg 2010/2020",
- cd:{full:"§501-8.8 A(4)",limited:"N/A",mhld:"§501-8.8 A(4) — lots only",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},
- ts:"Goal 3: Safety; Goal 4: Environment"},
-{id:"sw",lb:"Sidewalk",rs:"§340.060; Dwg 2110; 5ft min",
- cd:{full:"§501-8.8 A(6); §502",limited:"N/A",mhld:"§501-8.1 B(5)(a); §502 — lots only",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},
- ts:"Goal 8: Active Transportation — Pedestrian Element"},
-{id:"bike",lb:"Bicycle Facility",rs:"§340.010; Exhibits 1-2 (6ft)",
- cd:{full:"§501-8.8 A(3)(a); §501-8.2 I",limited:"N/A",mhld:"§501-8.8 A(3)(a) — lots only",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},
- ts:"Goal 8: Active Transportation — Bicycle Element"},
-{id:"storm",lb:"Storm Drainage",rs:"§330; WCCO 15.130.030",
- cd:{full:"§501-8.2 B(2); §501-8.8 A(7)",limited:"N/A",mhld:"§501-8.1 C(4)(b)",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},
- ts:"Goal 4: Natural Environment"},
-{id:"light",lb:"Street Lighting",rs:"§350; Exhibit 11-12",
- cd:{full:"§501-8.2 C",limited:"N/A",mhld:"§501-8.2 C — lots only",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},
- ts:"Goal 3: Safety — Obj 3.1"},
-{id:"acc",lb:"Access / Driveways",rs:"§130.020; §340.070",
- cd:{full:"§501-8.5 B(1-4)",limited:"§501-8.5",mhld:"§501-8.5; §430-84.3 B(4)",expansion:"§501-8.5 (new access)",adu:"§501-8.5",exempt:"N/A",nonconf:"§501-8.5 via §440-10",outside:"§501-8.5 via §501-9.3"},
- ts:"Goal 6: Accessibility — Strategy 6.1.2"},
-{id:"sight",lb:"Sight Distance",rs:"§130.080 (defers to CDC)",
- cd:{full:"§501-8.5 F",limited:"§501-8.5 F",mhld:"§501-8.5 F",expansion:"§501-8.5 F (new driveway)",adu:"§501-8.5 F",exempt:"N/A",nonconf:"§501-8.5 F",outside:"§501-8.5 F via §501-9.3"},
- ts:"Goal 3: Safety — Obj 3.1"},
-{id:"turn",lb:"Turn Lane / Channelization",rs:"R&O 86-95; AASHTO",
- cd:{full:"§501-8.2 B(1); R&O 86-95",limited:"N/A",mhld:"N/A",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"§501-9.3 B (≥500 ADT)"},
- ts:"Goal 3: Safety; TSP Safety Concern locations"},
-{id:"sig",lb:"Signalization",rs:"R&O 86-95; MUTCD",
- cd:{full:"§501-8.2 B(1); R&O 86-95",limited:"N/A",mhld:"N/A",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"§501-9.3 B (≥500 ADT)"},
- ts:"Goal 3: Safety; R&O 86-95 SPIS"},
-{id:"tree",lb:"Street Trees",rs:"§340.130",
- cd:{full:"§501-8.8 A(11)",limited:"N/A",mhld:"§501-8.8 A(11) — lots only",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},
- ts:"Goal 5: Livability"},
-{id:"pedx",lb:"Ped/Bike Crossing",rs:"Not in §130.030 — CDC only",
- cd:{full:"§501-8.8 A(12)",limited:"N/A",mhld:"§501-8.8 A(12) — lots only",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},
- ts:"Goal 8: Active Transp; Goal 3: Safety — Strategy 3.1.6"},
-{id:"tdt",lb:"Transportation Development Tax",rs:"N/A — fee",
- cd:{full:"§501-2.8",limited:"§501-2.8",mhld:"§501-2.8",expansion:"§501-2.8",adu:"§501-2.8",exempt:"§501-2.8",nonconf:"§501-2.8",outside:"§501-2.8"},
- ts:"Part 4: Funding — TDT capital list"}
+{id:"row",lb:"ROW Dedication",rs:"Exhibits 1-6; §130.040",cd:{full:"§501-8.4 A",limited:"§501-8.1 B(2)(a)",mhld:"§501-8.1 B(2)(b)",expansion:"§501-8.4 B(1)",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"§501-8.4 via §501-9.3"},ts:"Goal 5: Mobility — Table 3"},
+{id:"half",lb:"Half-Street Paving",rs:"§130.030; Exhibits 1-6",cd:{full:"§501-8.1 B(9)/§501-8.2 G",limited:"N/A",mhld:"§501-8.1 B(9)/§501-8.2 G — lots only",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},ts:"Goal 3: Safety; Goal 5: Mobility"},
+{id:"curb",lb:"Curb & Gutter",rs:"§340.050; Dwg 2010",cd:{full:"§501-8.8 A(4)",limited:"N/A",mhld:"§501-8.8 A(4)",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},ts:"Goal 3: Safety; Goal 4: Environment"},
+{id:"sw",lb:"Sidewalk",rs:"§340.060; Dwg 2110",cd:{full:"§501-8.8 A(6); §502",limited:"N/A",mhld:"§501-8.1 B(5)(a); §502",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},ts:"Goal 8: Active Transp — Pedestrian"},
+{id:"bike",lb:"Bicycle Facility",rs:"§340.010; Exhibits 1-2",cd:{full:"§501-8.8 A(3)(a); §501-8.2 I",limited:"N/A",mhld:"§501-8.8 A(3)(a)",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},ts:"Goal 8: Active Transp — Bicycle"},
+{id:"storm",lb:"Storm Drainage",rs:"§330; WCCO 15.130",cd:{full:"§501-8.2 B(2); §501-8.8 A(7)",limited:"N/A",mhld:"§501-8.1 C(4)(b)",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},ts:"Goal 4: Environment"},
+{id:"light",lb:"Street Lighting",rs:"§350; Exhibit 11",cd:{full:"§501-8.2 C",limited:"N/A",mhld:"§501-8.2 C",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},ts:"Goal 3: Safety"},
+{id:"acc",lb:"Access / Driveways",rs:"§130.020; §340.070",cd:{full:"§501-8.5 B(1-4)",limited:"§501-8.5",mhld:"§501-8.5",expansion:"§501-8.5",adu:"§501-8.5",exempt:"N/A",nonconf:"§501-8.5 via §440-10",outside:"§501-8.5 via §501-9.3"},ts:"Goal 6: Accessibility"},
+{id:"sight",lb:"Sight Distance",rs:"§130.080 → CDC",cd:{full:"§501-8.5 F",limited:"§501-8.5 F",mhld:"§501-8.5 F",expansion:"§501-8.5 F",adu:"§501-8.5 F",exempt:"N/A",nonconf:"§501-8.5 F",outside:"§501-8.5 F"},ts:"Goal 3: Safety"},
+{id:"turn",lb:"Turn Lane",rs:"R&O 86-95; AASHTO",cd:{full:"§501-8.2 B(1)",limited:"N/A",mhld:"N/A",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"§501-9.3 B"},ts:"Goal 3: Safety"},
+{id:"sig",lb:"Signalization",rs:"R&O 86-95; MUTCD",cd:{full:"§501-8.2 B(1)",limited:"N/A",mhld:"N/A",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"§501-9.3 B"},ts:"Goal 3: Safety"},
+{id:"tree",lb:"Street Trees",rs:"§340.130",cd:{full:"§501-8.8 A(11)",limited:"N/A",mhld:"§501-8.8 A(11)",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},ts:"Goal 5: Livability"},
+{id:"pedx",lb:"Ped/Bike Crossing",rs:"CDC only (not §130.030)",cd:{full:"§501-8.8 A(12)",limited:"N/A",mhld:"§501-8.8 A(12)",expansion:"N/A",adu:"N/A",exempt:"N/A",nonconf:"N/A",outside:"N/A"},ts:"Goal 8; Goal 3: Safety"},
+{id:"tdt",lb:"TDT",rs:"N/A",cd:{full:"§501-2.8",limited:"§501-2.8",mhld:"§501-2.8",expansion:"§501-2.8",adu:"§501-2.8",exempt:"§501-2.8",nonconf:"§501-2.8",outside:"§501-2.8"},ts:"Part 4: Funding"}
 ];
 const SD={25:250,30:300,35:350,40:400,45:450,50:500,55:550};
 const AS={"Arterial":"600ft; no private driveway (§501-8.5 B(4))","Collector":"100ft Pt C-C (§501-8.5 B(3))","Neighborhood Route":"50ft Pt C-C (§501-8.5 B(2))","Local":"10ft from Pt B (§501-8.5 B(1))","Commercial/Industrial":"Per classification"};
-const TD={full:"Full Article V — §501-1 through §501-13",limited:"Limited §501-2.6 B — ROW (minimums), sight distance, access, TDT",mhld:"MH Land Div §501-2.6 D — resulting lot frontage only",expansion:"§501-2.6 C — Critical + Essential (B,J,K), ROW, sight distance",adu:"§501-2.6 A — Access (§501-8.5) only",exempt:"Exempt §501-2.2 B/2.7 — TDT only",nonconf:"§440-10 — Access conformance (≥25% ADT)",outside:"§501-9 — ROW, sight distance, road standards; waiver"};
+const TD={full:"Full Article V",limited:"Limited §501-2.6 B",mhld:"MH Land Div §501-2.6 D",expansion:"§501-2.6 C",adu:"§501-2.6 A — Access only",exempt:"Exempt — TDT only",nonconf:"§440-10",outside:"§501-9"};
 
-// Init designation dropdown
+// Init
 (function(){const s=document.getElementById('eDes');const b=document.createElement('option');b.value='';b.textContent='— Select —';s.appendChild(b);for(const[k,v]of Object.entries(D)){const o=document.createElement('option');o.value=k;o.textContent=k+' — '+v.cl+' ('+v.r+'ft ROW, Ex '+v.x+')';s.appendChild(o)}})();
 
 function v(id){return(document.getElementById(id)||{}).value||''}
-function sp(p){['lu','eng','auth','hier','rpt'].forEach((x,i)=>{document.getElementById('p'+x.charAt(0).toUpperCase()+x.slice(1)).classList.toggle('on',x===p);document.querySelectorAll('.nav button')[i].classList.toggle('on',['lu','eng','auth','hier','rpt'][i]===p)});if(p==='auth')rAuth();if(p==='rpt')document.getElementById('rptO').textContent=gRpt()}
+function sp(p){const panels=['pl','tr','en','au','hi','rp'];panels.forEach((x,i)=>{const el=document.getElementById('p'+x.charAt(0).toUpperCase()+x.slice(1));if(el)el.classList.toggle('on',x===p);document.querySelectorAll('.nv button')[i].classList.toggle('on',panels[i]===p)});if(p==='au')rAu();if(p==='rp')document.getElementById('rO').textContent=gR()}
 function tg(el){el.nextElementSibling.classList.toggle('open')}
 
-// Land Use
-function luChg(){
-  const t=v('luApp');if(!t){document.getElementById('luInfo').innerHTML='';rChk();return}
+// Planning
+function plChg(){
+  const t=v('plApp');if(!t){document.getElementById('plInfo').innerHTML='';rCk();return}
   const cnt=AM.filter(a=>(a.cd[t]||'N/A')!=='N/A').length;
-  let h='<div class="al al-i"><strong>'+TD[t]+'</strong><br>'+cnt+' improvement categories can be conditioned.';
-  if(t==='limited')h+='<br>⚠ Only ROW (minimums), sight distance, access, TDT. No half-street/sidewalk/lighting.';
-  if(t==='mhld')h+='<br>Improvements limited to frontage of resulting lots only.';
-  if(t==='exempt')h+='<br>Only TDT applies. No other Article V requirements.';
-  if(t==='adu')h+='<br>Only §501-8.5 (Access) applies.';
-  if(t==='nonconf')h+='<br>Access must conform to §501-8.5 when ≥25% ADT increase.';
-  h+='</div>';
-  document.getElementById('luInfo').innerHTML=h;rChk()
+  let h='<div class="al al-i"><strong>'+TD[t]+'</strong> — '+cnt+' categories conditionable.';
+  if(t==='limited')h+='<br>⚠ Only ROW (minimums), sight distance, access, TDT.';
+  if(t==='mhld')h+='<br>Improvements limited to frontage of resulting lots.';
+  if(t==='exempt')h+='<br>TDT only.';
+  if(t==='adu')h+='<br>§501-8.5 (Access) only.';
+  h+='</div>';document.getElementById('plInfo').innerHTML=h;rCk()
 }
-function luClsChg(){
-  const c=v('luCls'),a=AS[c]||'';
-  let h='';if(c){h='<div class="al al-s" style="margin-top:4px"><strong>'+c+':</strong> Access spacing: '+a+'</div>'}
-  document.getElementById('luGoals').innerHTML=h;
-  document.getElementById('eRoad').value=v('luRoad')
+function plClsChg(){
+  const c=v('plCls'),a=AS[c]||'';
+  let h='';if(c)h='<div class="al al-s"><strong>'+c+':</strong> Access: '+a+'</div>';
+  document.getElementById('plGoals').innerHTML=h;
+  document.getElementById('eRoad').value=v('plRoad');
+  checkOverlays()
+}
+function checkOverlays(){
+  const ss=v('plStreetscape')==='yes',em=v('plEMSB')==='yes',pp=v('plPedPkwy')==='yes',pd=v('plPedDist')==='yes',sr=v('plSRTS')==='yes',cs=v('plCS')==='yes';
+  let h='';
+  if(ss)h+='<div class="wbox" style="background:#e8f5e9;border:1px solid #a5d6a7;color:#1b5e20"><strong>Streetscape Overlay:</strong> Enhanced ped/bike/transit design. Additional ROW per TSP Table 3. CDC §501-8.2 J requires Director to determine if additional ROW/setbacks/easements needed. Pedestrian System Map designations must not be precluded.</div>';
+  if(em)h+='<div class="wbox" style="background:#e3f2fd;border:1px solid #90caf9;color:#0d47a1"><strong>Enhanced Major Street Bikeway:</strong> Buffered bike lanes and other treatments per Bicycle Facility Design Toolkit (County Engineer determination). CDC §501-8.2 B(4) requires ROW per functional classification including EMSB designations. Additional ROW per TSP Table 3 overlay rows.</div>';
+  if(pp)h+='<div class="wbox" style="background:#f3e5f5;border:1px solid #ce93d8;color:#6a1b9a"><strong>Pedestrian Parkway:</strong> Enhanced pedestrian environment. CDC §501-8.2 J — Director determines additional ROW, setbacks, easements. Design per Pedestrian System Map and Complete Streets standards.</div>';
+  if(pd)h+='<div class="wbox" style="background:#fff3e0;border:1px solid #ffcc80;color:#e65100"><strong>Pedestrian/Bicycle District:</strong> Per TSP Pedestrian System Map. Enhanced multimodal design. May require wider sidewalks, additional buffer areas, enhanced crossings.</div>';
+  if(sr)h+='<div class="wbox" style="background:#fff8e1;border:1px solid #fff176;color:#f57f17"><strong>Safe Routes to School:</strong> School within ½ mile. Enhanced pedestrian safety features: crossings, sidewalk gaps, sight distance improvements, speed management, lighting. MUTCD Warrant 5 (School Crossing) may apply. Coordinate with school district and ODOT SRTS program.</div>';
+  if(cs)h+='<div class="wbox" style="background:#e0f2f1;border:1px solid #80cbc4;color:#00695c"><strong>Complete Streets:</strong> TSP Goal 8 — "new and improved connections are to be implemented as complete streets within the urban area." Roadways designed for all users: walking, bicycling, mobility devices, transit, cars, freight. All ages, abilities, means. Per TSP System Design section.</div>';
+  document.getElementById('plOverlayInfo').innerHTML=h
+}
+
+// Traffic
+function trCalcThresholds(){
+  const ex=Number(v('trExistAdt')),dev=Number(v('trAdt'));
+  if(!ex){document.getElementById('trThresholds').innerHTML='';return}
+  const pct10=ex*0.1, pct25=ex*0.25;
+  const impactArea=dev>=pct10;
+  const access25=dev>=pct25;
+  // Access report thresholds per R&O 86-95 Appendix C
+  let rptThresh='N/A';
+  if(ex<=3000)rptThresh='2,000';else if(ex<=6000)rptThresh='1,000';else rptThresh='500';
+  const rptReq=dev>=Number(rptThresh.replace(',',''));
+  let h='<div class="al '+(impactArea?'al-w':'al-s')+'">';
+  h+='<strong>Calculated Thresholds:</strong><br>';
+  h+='10% of existing ('+ex+'): <strong>'+Math.round(pct10)+' ADT</strong> — development generates '+dev+' → '+(impactArea?'<span class="bd br">IMPACT AREA TRIGGERED</span>':'<span class="bd bg">Frontage only</span>')+'<br>';
+  h+='25% of existing: <strong>'+Math.round(pct25)+' ADT</strong> — '+(access25?'<span class="bd br">§440-10 CONFORMANCE TRIGGERED</span>':'<span class="bd bg">Below threshold</span>')+'<br>';
+  h+='Access Report threshold (R&O 86-95 App C): '+rptThresh+' vpd for existing '+ex+' ADT — '+(rptReq?'<span class="bd by">REPORT REQUIRED</span>':'not required');
+  h+='</div>';
+  document.getElementById('trThresholds').innerHTML=h
+}
+function trImpactChg(){document.getElementById('trImpactArea').style.display=v('tr10pct')==='yes'?'block':'none'}
+
+
+function trWCheck(){
+  let met=[];
+  for(let i=1;i<=9;i++){const w=v('trW'+i);if(w==='met')met.push(i);}
+  let h='';
+  if(met.length>0)h='<div class="al al-w" style="margin-top:4px"><strong>'+met.length+' warrant(s) MET:</strong> Warrant '+met.join(', ')+'. Signal may be justified pending engineering study per MUTCD 4C.01.</div>';
+  else h='<div class="al al-s" style="margin-top:4px">No warrants currently met.</div>';
+  document.getElementById('trWarrantResult').innerHTML=h;
 }
 
 // Engineering
 function eDesChg(){
-  const k=v('eDes'),d=D[k];if(!d){document.getElementById('eDesInf').innerHTML='';return}
+  const k=v('eDes'),d=D[k];if(!d){document.getElementById('eDesI').innerHTML='';return}
   const h2=Math.ceil(d.r/2);
-  let h='<div class="al al-s"><strong>'+k+':</strong> '+d.r+'ft ROW · '+d.p+'ft paved · '+d.l+' lanes · '+(d.b?d.b+'ft bike':'no bike')+' · '+(d.c?d.c+'ft center turn':'no center')+' · Ex '+d.x+' · '+d.s+'mph · Half-ROW: '+h2+'ft · Sight: '+SD[d.s]+'ft'+(d.n?'<br><em>'+d.n+'</em>':'')+'</div>';
-  const lc=v('luCls');
-  if(lc&&d.cl!==lc)h+='<div class="al al-d"><strong>⚠ MISMATCH:</strong> '+k+' = '+d.cl+' but Land Use has "'+lc+'"</div>';
+  let h='<div class="al al-s"><strong>'+k+':</strong> '+d.r+'ft ROW · '+d.p+'ft paved · '+d.l+' lanes · '+(d.b?d.b+'ft bike':'no bike')+' · '+(d.c?d.c+'ft turn':'no turn')+' · Ex '+d.x+' · '+d.s+'mph · Half: '+h2+'ft · Sight: '+SD[d.s]+'ft'+(d.n?'<br><em>'+d.n+'</em>':'')+'</div>';
+  const lc=v('plCls');
+  if(lc&&d.cl!==lc)h+='<div class="al al-d"><strong>⚠ MISMATCH:</strong> '+k+'='+d.cl+' but Planning says "'+lc+'"</div>';
   else if(lc)h+='<div class="al al-s">✓ Matches TSP: '+lc+'</div>';
-  document.getElementById('eDesInf').innerHTML=h;eDef();rChk()
+  // Check overlay impacts on ROW
+  if(v('plStreetscape')==='yes'||v('plEMSB')==='yes')h+='<div class="al al-w"><strong>TSP Overlay active:</strong> Check Table 3 overlay rows — ROW/paved may exceed base designation.</div>';
+  document.getElementById('eDesI').innerHTML=h;eDef();rCk()
 }
 function eDef(){
-  const d=D[v('eDes')],e=Number(v('eROW'));if(!d||!e){document.getElementById('eDeficit').innerHTML='';return}
+  const d=D[v('eDes')],e=Number(v('eROW'));if(!d||!e){document.getElementById('eDft').innerHTML='';return}
   const df=d.r-e;
-  document.getElementById('eDeficit').innerHTML=df>0?'<div class="al al-d"><strong>DEFICIT: '+df+'ft.</strong> Need ~'+Math.ceil(df/2)+'ft from property.</div>':'<div class="al al-s">✓ ROW meets standard.</div>'
+  document.getElementById('eDft').innerHTML=df>0?'<div class="al al-d"><strong>DEFICIT: '+df+'ft.</strong> Need ~'+Math.ceil(df/2)+'ft dedication.</div>':'<div class="al al-s">✓ ROW meets standard.</div>'
 }
-function rChk(){
-  const t=v('luApp');
-  if(!t){document.getElementById('eChk').innerHTML='<em>Select Application Type in Land Use tab.</em>';return}
-  let h='';
-  AM.forEach(a=>{const cd=a.cd[t]||'N/A';const ok=cd!=='N/A';
-    h+='<div style="padding:5px 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:flex-start'+(ok?'':';background:#fff3e0;padding:5px 6px;border-radius:3px;margin:2px 0')+'">';
-    h+='<div><strong style="font-size:11px">'+a.lb+'</strong>';
-    h+='<div style="font-size:9px;color:#6c757d">Road Std: '+a.rs+'</div>';
-    if(ok)h+='<div style="font-size:9px;color:#1565c0">CDC: '+cd+'</div>';
-    h+='<div style="font-size:9px;color:#2e7d32">TSP: '+a.ts+'</div></div>';
-    h+=ok?'<span class="bd bg">✓</span>':'<span class="bd br">⚠ NO CDC</span>';
-    h+='</div>'
-  });
-  document.getElementById('eChk').innerHTML=h
+function rCk(){
+  const t=v('plApp');
+  if(!t){document.getElementById('eChk').innerHTML='<em>Select App Type in Planning tab.</em>';return}
+  let h='';AM.forEach(a=>{const cd=a.cd[t]||'N/A';const ok=cd!=='N/A';
+  h+='<div style="padding:4px 0;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:flex-start'+(ok?'':';background:#fff3e0;padding:4px 5px;border-radius:3px;margin:1px 0')+'">';
+  h+='<div><strong style="font-size:10px">'+a.lb+'</strong><div style="font-size:9px;color:#6c757d">Std: '+a.rs+'</div>';
+  if(ok)h+='<div style="font-size:9px;color:#1565c0">CDC: '+cd+'</div>';
+  h+='<div style="font-size:9px;color:#2e7d32">TSP: '+a.ts+'</div></div>';
+  h+=ok?'<span class="bd bg">✓</span>':'<span class="bd br">⚠ NO CDC</span>';
+  h+='</div>'});document.getElementById('eChk').innerHTML=h
 }
 
 // Authority
-function rAuth(){
-  const t=v('luApp')||'full';
-  let h='<table class="at"><thead><tr><th>Improvement</th><th>Road Standard</th><th>CDC Authority ('+t+')</th><th>TSP Goal</th><th>Status</th></tr></thead><tbody>';
+function rAu(){
+  const t=v('plApp')||'full';
+  const ss=v('plStreetscape')==='yes',em=v('plEMSB')==='yes';
+  let h='<table class="at"><thead><tr><th>Improvement</th><th>Road Std</th><th>CDC ('+t+')</th><th>TSP Goal</th>';
+  if(ss||em)h+='<th>Overlay</th>';
+  h+='<th>Status</th></tr></thead><tbody>';
   AM.forEach(a=>{const cd=a.cd[t]||'N/A';const ok=cd!=='N/A';
-    h+='<tr class="'+(ok?'':'w')+'"><td style="font-weight:600">'+a.lb+'</td><td class="mn">'+a.rs+'</td><td class="mn">'+(ok?cd:'<span style="color:#c62828;font-weight:700">'+cd+'</span>')+'</td><td style="font-size:9px">'+a.ts+'</td><td>'+(ok?'<span class="bd bg">✓ Auth</span>':'<span class="bd br">⚠ NONE</span>')+'</td></tr>'
-  });
-  h+='</tbody></table>';
-  document.getElementById('authTbl').innerHTML=h
+  h+='<tr class="'+(ok?'':'w')+'"><td style="font-weight:600;font-size:10px">'+a.lb+'</td><td class="mn">'+a.rs+'</td><td class="mn">'+(ok?cd:'<span style="color:#c62828;font-weight:700">N/A</span>')+'</td><td style="font-size:9px">'+a.ts+'</td>';
+  if(ss||em){
+    let ov='—';
+    if((a.id==='bike'||a.id==='sw'||a.id==='row')&&em)ov='<span class="bd by">EMSB — enhanced</span>';
+    if((a.id==='sw'||a.id==='row')&&ss)ov='<span class="bd by">Streetscape — enhanced</span>';
+    h+='<td>'+ov+'</td>';
+  }
+  h+='<td>'+(ok?'<span class="bd bg">✓</span>':'<span class="bd br">⚠</span>')+'</td></tr>'});
+  h+='</tbody></table>';document.getElementById('auTbl').innerHTML=h
 }
 
 // Report
-function gRpt(){
-  const d=D[v('eDes')]||{},t=v('luApp')||'',rd=v('luRoad')||v('eRoad')||'[Road]',h2=d.r?Math.ceil(d.r/2):'___',sd=SD[Number(v('luSpd'))||d.s]||'___';
+function gR(){
+  const d=D[v('eDes')]||{},t=v('plApp')||'',rd=v('plRoad')||'[Road]',h2=d.r?Math.ceil(d.r/2):'___',sd=SD[Number(v('plSpd'))||d.s]||'___';
   const L=[];
   L.push('Attachment D\nTRANSPORTATION REPORT\n\nFINDINGS:\n');
-  L.push('1.\tPROJECT PROPOSAL\n\ta.\t'+(v('luUse')||'[use]')+' on ±'+(v('luAc')||'___')+'ac (Map '+(v('luMap')||'___')+'; TL '+(v('luTL')||'___')+').');
-  L.push('\tb.\tITE '+(v('luIte')||'___')+', '+(v('luAdt')||'___')+' ADT'+(v('luPk')?' / '+v('luPk')+' PM peak':'')+'. Report: '+(v('luFirm')||'___')+', Ex '+(v('luExh')||'___')+'.\n');
-  L.push('2.\tEXISTING: '+rd+' — '+(v('ePav')||'___')+'ft paved, '+(v('eROW')||'___')+'ft ROW, '+(v('eCL')||'___')+'ft CL-prop, '+(v('luSpd')||'___')+' mph.\n');
-  L.push('3.\tTSP: '+rd+' = '+(d.cl||v('luCls')||'___')+'. Table 3: '+(d.r||'___')+'ft ROW, '+(d.p||'___')+'ft paved.\n');
-  const sel=document.getElementById('luApp').selectedOptions[0];
-  L.push('4.\tCDC: '+(sel?.textContent||'___')+'. '+(TD[t]||''));
-  L.push('\tRoad Stds: '+(v('eDes')||'___')+', Ex '+(d.x||'___')+'. Half-ROW: '+h2+'ft.');
-  if(v('eROW')&&d.r){const df=d.r-Number(v('eROW'));L.push('\tDeficit: '+(df>0?df+'ft':'None')+'.')}
-  L.push('\n5.\tNEXUS & PROPORTIONALITY: '+(v('luAdt')||'___')+' ADT on '+rd+'. Frontage: '+(v('luFront')||'___')+'ft.\n');
-  L.push('6.\tSAFETY: '+(v('luT25')==='yes'?'>25% trip increase.':'No >25%.')+' '+(v('luOff')==='yes'?'Off-site warrants.':'No off-site warrants.')+' Sight: '+sd+'ft.\n');
-  L.push('7.\tMAINTENANCE: '+rd+' by WashCo. SDL per §501-8.2 C.\n');
-  L.push('8.\tCONDITIONS:\n\tFacility Permit. $'+(v('luDep')||'18,000')+' deposit.\n');
-  let cn=1;
-  AM.forEach(a=>{if(a.id==='tdt')return;const cd=a.cd[t]||'N/A';if(cd!=='N/A'){L.push('\t'+cn+'. '+a.lb+' — '+cd+' / '+a.rs);cn++}});
+  L.push('1.\tPROJECT PROPOSAL\n\ta.\t'+(v('plUse')||'[use]')+' on ±'+(v('plAc')||'___')+'ac (Map '+(v('plMap')||'___')+'; TL '+(v('plTL')||'___')+').');
+  L.push('\tb.\tITE '+(v('trIte')||'___')+' ('+(v('trIteName')||'___')+'), '+(v('trAdt')||'___')+' ADT'+(v('trPM')?' / '+v('trPM')+' PM peak':'')+'. Report: '+(v('trFirm')||'___')+', Ex '+(v('trExh')||'___')+'.');
+  L.push('\n2.\tEXISTING: '+rd+' — '+(v('ePav')||'___')+'ft paved, '+(v('eROW')||'___')+'ft ROW, '+(v('eCL')||'___')+'ft CL-prop, '+(v('plSpd')||'___')+' mph.');
+  L.push('\n3.\tTSP: '+rd+' = '+(d.cl||v('plCls')||'___')+'. Table 3: '+(d.r||'___')+'ft ROW.');
+  if(v('plStreetscape')==='yes')L.push('\tStreetscape Overlay applies — enhanced ped/bike/transit design per TSP.');
+  if(v('plEMSB')==='yes')L.push('\tEnhanced Major Street Bikeway — buffered bike lanes per Bicycle Facility Design Toolkit.');
+  if(v('plSRTS')==='yes')L.push('\tSafe Routes to School — school within ½ mile.');
+  L.push('\n4.\tCDC: '+TD[t]+'. Road Stds: '+(v('eDes')||'___')+', Ex '+(d.x||'___')+'. Half-ROW: '+h2+'ft.');
+  L.push('\n5.\tNEXUS: '+(v('trAdt')||'___')+' ADT on '+rd+'. Frontage: '+(v('plFront')||'___')+'ft.');
+  L.push('\n6.\tTRAFFIC SAFETY (R&O 86-95):');
+  L.push('\tImpact area: '+(v('tr10pct')==='yes'?'YES — ≥10% of existing.':'No — frontage only.'));
+  L.push('\tFrontage: Signal='+(v('trFrSig'))+', LT='+(v('trFrLT'))+', SW='+(v('trFrSW'))+', Sight='+(v('trFrSD'))+', Lighting='+(v('trFrLight')));
+  if(v('tr10pct')==='yes')L.push('\tImpact area: SPIS='+(v('trSpisHaz'))+', Signal='+(v('trImpSig'))+', LT='+(v('trImpLT'))+', Off-site SW='+(v('trImpSW')));
+  // ADA
+  L.push('\n\tADA: Curb ramps='+(v('trADA1'))+', DWS='+(v('trADA2'))+', Cross-slope='+(v('trADA3'))+', Width='+(v('trADA4')));
+  L.push('\n7.\tMAINTENANCE: '+rd+' by WashCo. SDL per §501-8.2 C.');
+  L.push('\n8.\tCONDITIONS:\n\tFacility Permit. $'+(v('eDep')||'18,000')+' deposit.');
+  let cn=1;AM.forEach(a=>{if(a.id==='tdt')return;const cd=a.cd[t]||'N/A';if(cd!=='N/A'){L.push('\t'+cn+'. '+a.lb+' — '+cd+' / '+a.rs);cn++}});
   L.push('\t'+cn+'. TDT per §501-2.8.');
   return L.join('\n')
 }
-function cpRpt(){navigator.clipboard.writeText(document.getElementById('rptO').textContent).then(()=>{const b=document.getElementById('cpBtn');b.textContent='✓';setTimeout(()=>b.textContent='Copy',2000)})}
-function dlRpt(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([document.getElementById('rptO').textContent],{type:'text/plain'}));a.download='TransportationReport.txt';a.click()}
-</script>
-</body></html>
+function cpR(){navigator.clipboard.writeText(document.getElementById('rO').textContent).then(()=>{const b=document.getElementById('cpB');b.textContent='✓';setTimeout(()=>b.textContent='Copy',2000)})}
+function dlR(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([document.getElementById('rO').textContent],{type:'text/plain'}));a.download='TransportationReport.txt';a.click()}
+</script></body></html>
