@@ -89,7 +89,20 @@ nav button:hover{background:#f0f5f4;color:var(--primary-dk)}
 @media print{nav,header,.btn,.no-print{display:none!important}.tab{display:block!important;page-break-inside:avoid}}
 @media(max-width:600px){.row{flex-direction:column}.field{min-width:100%}nav button{font-size:9px;padding:8px 2px}}
 </style>
-<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script>
+if(typeof PDFLib==='undefined'){
+  var s=document.createElement('script');
+  s.src='https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js';
+  s.onerror=function(){
+    var s2=document.createElement('script');
+    s2.src='https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js';
+    s2.onerror=function(){console.warn('pdf-lib could not load from any CDN. PDF generation will not work offline.')};
+    document.head.appendChild(s2);
+  };
+  document.head.appendChild(s);
+}
+</script>
 </head><body>
 <header>
 <h1>Washington County Transportation Development Review</h1>
@@ -1646,6 +1659,7 @@ const TRAFFIC_FIELDS=['casefile','address','appType','proposal',
 
 // ── GENERATE ENGINEER RDCS PDF ──
 async function generateEngrPDF(roadIdx){
+  if(typeof PDFLib==='undefined'){throw new Error('PDF library did not load. Check your internet connection or try a different network. The file pdf-lib.min.js must be accessible from cdnjs.cloudflare.com, cdn.jsdelivr.net, or unpkg.com.');}
   const {PDFDocument,PDFName,PDFString,StandardFonts,rgb}=PDFLib;
   const pdf=await PDFDocument.create();
   const font=await pdf.embedFont(StandardFonts.Helvetica);
@@ -1672,7 +1686,7 @@ async function generateEngrPDF(roadIdx){
     'Per WCCO 15.08.350; annex into SDL No. 1',
     `Landscape strip per ${desig}`,
     'Per WCCO 15.08.360; connect to existing system',
-    speed?`${speed*10}ft (10 × ${speed} MPH posted speed)`:'10× posted speed limit',
+    speed?`${speed*10}ft (10 × ${speed} MPH posted speed)`:'10x posted speed limit',
     'Per AASHTO warrant analysis',
     'Per residential/commercial driveway standard',
     'Per WCCO 15.08.340.040 approach standard',
@@ -1684,7 +1698,7 @@ async function generateEngrPDF(roadIdx){
     'Per DEQ 1200-C permit requirements',
     'Per MUTCD standards',
     'Per county standard at all intersections',
-    cls.includes('Arterial')?'Required — submit with Facility Permit':'If required by county engineer'
+    cls.includes('Arterial')?'Required - submit with Facility Permit':'If required by county engineer'
   ];
 
   // Separate items into applicable (Req/Cond) and not applicable (N/A)
@@ -1699,7 +1713,7 @@ async function generateEngrPDF(roadIdx){
   // Helper: draw a page header
   function drawPageHeader(pg,subtitle){
     pg.drawRectangle({x:36,y:740,width:540,height:40,color:rgb(...maroon)});
-    pg.drawText('RDCS PLAN REVIEW — ENGINEER CONFIRMATION',{x:42,y:756,size:12,font:fontB,color:rgb(1,1,1)});
+    pg.drawText('RDCS PLAN REVIEW - ENGINEER CONFIRMATION',{x:42,y:756,size:12,font:fontB,color:rgb(1,1,1)});
     pg.drawText('Washington County Dept. of Land Use & Transportation',{x:42,y:743,size:8,font,color:rgb(1,1,0.9)});
     if(subtitle){
       pg.drawRectangle({x:36,y:726,width:540,height:14,color:rgb(...navy)});
@@ -1715,7 +1729,7 @@ async function generateEngrPDF(roadIdx){
   // Case info block
   const info=[
     ['Casefile:',cf],['Road:',name],['Classification:',cls],
-    ['Designation:',desig+(xs?' — '+xs.d:'')],
+    ['Designation:',desig+(xs?' - '+xs.d:'')],
     ['Address:',gv('address')],['Application:',APP_DESC_LONG[app]||app],
     ['Date:',new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})],
     ['From:',gv('ctPlanner')||'Planner']
@@ -1754,7 +1768,7 @@ async function generateEngrPDF(roadIdx){
   function ensureSpace(needed){
     if(y-needed<50||itemsOnPage>=maxPerPage){
       currentPage=pdf.addPage([612,792]);
-      drawPageHeader(currentPage,name+' — RDCS Review (continued)');
+      drawPageHeader(currentPage,name+' - RDCS Review (continued)');
       y=720;
       currentPage.drawRectangle({x:36,y:y-14,width:540,height:14,color:rgb(...navy)});
       currentPage.drawText('CONFIRM',{x:40,y:y-11,size:7,font:fontB,color:rgb(1,1,1)});
@@ -1805,7 +1819,7 @@ async function generateEngrPDF(roadIdx){
   ensureSpace(160);
 
   currentPage.drawRectangle({x:36,y:y-14,width:540,height:14,color:rgb(...teal)});
-  currentPage.drawText('ADDITIONAL STANDARDS — Engineer Recommendation',{x:42,y:y-11,size:8,font:fontB,color:rgb(1,1,1)});
+  currentPage.drawText('ADDITIONAL STANDARDS - Engineer Recommendation',{x:42,y:y-11,size:8,font:fontB,color:rgb(1,1,1)});
   y-=20;
   currentPage.drawText('If any standards NOT listed above should apply to this project, describe them here:',{x:42,y:y,size:7,font,color:rgb(0.4,0.4,0.4)});
   y-=8;
@@ -1832,7 +1846,7 @@ async function generateEngrPDF(roadIdx){
   dex.addOptions(['','Yes','No']);
   dex.addToPage(currentPage,{x:40,y:y-16,width:100,height:18});
 
-  currentPage.drawText('If Yes — which standard, rationale:',{x:150,y:y-2,size:7,font,color:rgb(0.4,0.4,0.4)});
+  currentPage.drawText('If Yes - which standard, rationale:',{x:150,y:y-2,size:7,font,color:rgb(0.4,0.4,0.4)});
   const dexd=form.createTextField('design_exception_detail');
   dexd.addToPage(currentPage,{x:150,y:y-16,width:422,height:18});
   dexd.setFontSize(8);
@@ -1849,7 +1863,7 @@ async function generateEngrPDF(roadIdx){
 
   // Footer
   y-=30;
-  currentPage.drawText('Return this completed PDF to: '+(gv('ctPlanner')||'Planner')+' — '+(gv('ctEngrEmail')?'Reply to sender email':''),{x:42,y:y,size:7,font,color:rgb(0.5,0.5,0.5)});
+  currentPage.drawText('Return this completed PDF to: '+(gv('ctPlanner')||'Planner')+' - '+(gv('ctEngrEmail')?'Reply to sender email':''),{x:42,y:y,size:7,font,color:rgb(0.5,0.5,0.5)});
 
   return pdf;
 }
@@ -1886,6 +1900,7 @@ async function sendEngrPDF(roadIdx){
 
 // ── GENERATE TRAFFIC ENGINEER PDF ──
 async function generateTrafficPDF(){
+  if(typeof PDFLib==='undefined'){throw new Error('PDF library did not load. Check your internet connection or try a different network. The file pdf-lib.min.js must be accessible from cdnjs.cloudflare.com, cdn.jsdelivr.net, or unpkg.com.');}
   const {PDFDocument,StandardFonts,rgb}=PDFLib;
   const pdf=await PDFDocument.create();
   const font=await pdf.embedFont(StandardFonts.Helvetica);
@@ -1899,7 +1914,7 @@ async function generateTrafficPDF(){
 
   // Header
   page.drawRectangle({x:36,y:740,width:540,height:40,color:rgb(...maroon)});
-  page.drawText('TRAFFIC ENGINEERING REVIEW — RESPONSE FORM',{x:42,y:756,size:12,font:fontB,color:rgb(1,1,1)});
+  page.drawText('TRAFFIC ENGINEERING REVIEW - RESPONSE FORM',{x:42,y:756,size:12,font:fontB,color:rgb(1,1,1)});
   page.drawText('Washington County Dept. of Land Use & Transportation',{x:42,y:743,size:8,font,color:rgb(1,1,0.9)});
   y=728;
 
@@ -1939,7 +1954,7 @@ async function generateTrafficPDF(){
   // ── IMPACT AREA ──
   y-=6;
   page.drawRectangle({x:36,y:y-14,width:540,height:14,color:rgb(...navy)});
-  page.drawText('IMPACT AREA — R&O 86-95 (intersections where site traffic ≥ 10% of existing ADT)',{x:42,y:y-11,size:7,font:fontB,color:rgb(1,1,1)});y-=18;
+  page.drawText('IMPACT AREA - R&O 86-95 (intersections where site traffic >= 10% of existing ADT)',{x:42,y:y-11,size:7,font:fontB,color:rgb(1,1,1)});y-=18;
 
   // Grid header
   page.drawText('#',{x:40,y:y,size:7,font:fontB});page.drawText('Intersection',{x:54,y:y,size:7,font:fontB});
@@ -1956,7 +1971,7 @@ async function generateTrafficPDF(){
     page.drawText(num+'.',{x:40,y:y-10,size:8,font:fontB,color:rgb(...navy)});
     y-=18;
   }
-  page.drawText('≥ 32.24 SPIS = existing hazard',{x:42,y:y-4,size:6,font,color:rgb(0.5,0.5,0.5)});y-=10;
+  page.drawText('>= 32.24 SPIS = existing hazard',{x:42,y:y-4,size:6,font,color:rgb(0.5,0.5,0.5)});y-=10;
 
   // ── SAFETY ANALYSIS ──
   y-=4;
@@ -1973,7 +1988,7 @@ async function generateTrafficPDF(){
   // ── COMMENTS ── (page 2)
   let page2=pdf.addPage([612,792]);y=760;
   page2.drawRectangle({x:36,y:748,width:540,height:20,color:rgb(...navy)});
-  page2.drawText('TRAFFIC REVIEW (continued) — '+cf,{x:42,y:752,size:9,font:fontB,color:rgb(1,1,1)});y=740;
+  page2.drawText('TRAFFIC REVIEW (continued) - '+cf,{x:42,y:752,size:9,font:fontB,color:rgb(1,1,1)});y=740;
 
   const commentFields=[['Safety Comments','safety_comments'],['Impact Area Narrative','impact_narrative'],['General Comments','general_comments'],['Recommended Conditions','recommended_conditions']];
   commentFields.forEach(([label,fname])=>{
@@ -2024,6 +2039,7 @@ async function importPDF(input){
 
   try{
     const buf=await file.arrayBuffer();
+    if(typeof PDFLib==='undefined'){throw new Error('PDF library did not load. Check your internet connection.');}
     const {PDFDocument}=PDFLib;
     const pdf=await PDFDocument.load(buf);
     const form=pdf.getForm();
